@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldelbart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/24 16:02:50 by ldelbart          #+#    #+#             */
-/*   Updated: 2016/07/24 16:07:37 by ldelbart         ###   ########.fr       */
+/*   Created: 2016/07/24 15:56:22 by ldelbart          #+#    #+#             */
+/*   Updated: 2016/07/24 16:24:48 by ldelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colle.h"
-
-void	ft_putnbr(int nb)
+int		ft_strcmp(char *s1, char *s2)
 {
-	if (nb == -2147483648)
-		ft_putmaxmin("-2147483648");
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	int a;
+
+	a = 0;
+	while (s1[a] && s2[a] && s1[a] == s2[a])
+		a++;
+	return (s1[a] - s2[a]);
 }

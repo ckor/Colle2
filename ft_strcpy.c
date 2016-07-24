@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldelbart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/24 16:02:50 by ldelbart          #+#    #+#             */
-/*   Updated: 2016/07/24 16:07:37 by ldelbart         ###   ########.fr       */
+/*   Created: 2016/07/24 16:09:09 by ldelbart          #+#    #+#             */
+/*   Updated: 2016/07/24 16:25:27 by ldelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colle.h"
-
-void	ft_putnbr(int nb)
+char	*ft_strcpy(char *dest, char *src)
 {
-	if (nb == -2147483648)
-		ft_putmaxmin("-2147483648");
-	if (nb < 0)
+	int i;
+
+	i = 0;
+	if (dest[i] < src[i])
+		return (0);
+	while (src[i])
 	{
-		ft_putchar('-');
-		nb *= -1;
+		dest[i] = src[i];
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	dest[i] = 0;
+	return (dest);
 }

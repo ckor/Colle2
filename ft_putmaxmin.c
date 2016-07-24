@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   putmaxmin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldelbart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/24 16:02:50 by ldelbart          #+#    #+#             */
-/*   Updated: 2016/07/24 16:07:37 by ldelbart         ###   ########.fr       */
+/*   Created: 2016/07/24 16:01:06 by ldelbart          #+#    #+#             */
+/*   Updated: 2016/07/24 19:22:04 by ldelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colle.h"
 
-void	ft_putnbr(int nb)
+void	ft_putmaxmin(char *str)
 {
-	if (nb == -2147483648)
-		ft_putmaxmin("-2147483648");
-	if (nb < 0)
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar('-');
-		nb *= -1;
+		ft_putchar(str[i]);
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
 }

@@ -3,21 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wzafati <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ldelbart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/10 03:14:17 by wzafati           #+#    #+#             */
-/*   Updated: 2016/07/12 16:13:17 by marvin           ###   ########.fr       */
+/*   Created: 2016/07/24 15:59:06 by ldelbart          #+#    #+#             */
+/*   Updated: 2016/07/24 16:00:19 by ldelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"ft_utils.h"
-
 int		ft_strlen(char *str)
 {
-	int		len;
+	int i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

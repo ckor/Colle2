@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_colle.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldelbart <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wzafati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/24 16:02:50 by ldelbart          #+#    #+#             */
-/*   Updated: 2016/07/24 16:07:37 by ldelbart         ###   ########.fr       */
+/*   Created: 2016/07/24 21:36:50 by wzafati           #+#    #+#             */
+/*   Updated: 2016/07/24 21:45:28 by wzafati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colle.h"
 
-void	ft_putnbr(int nb)
+void	ft_print_colle(int nb_line, int nb_colonne, char *nom_colle)
 {
-	if (nb == -2147483648)
-		ft_putmaxmin("-2147483648");
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	ft_putchar('[');
+	ft_putstr(nom_colle);
+	ft_putstr("] [");
+	ft_putnbr(nb_line);
+	ft_putstr("] [");
+	ft_putnbr(nb_colonne);
+	ft_putstr("]");
 }
